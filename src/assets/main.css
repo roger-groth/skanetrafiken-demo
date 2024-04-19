@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+.compact-table {
+  th,
+  td {
+    font-size: 90%;
+  }
+  @media (max-width: 1535px) {
+    th:not(:last-child) {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    }
+    td {
+      border-bottom: unset;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  th,
+  td {
+    font-size: 90%;
+  }
+  th:not(:last-child) {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 1024px) {
+  table {
+    display: inline-table !important;
+  }
+
+  thead tr:not(:first-child) {
+    display: none;
+  }
+}
+
+td:not(:last-child) {
+  border-bottom: 0;
+}
+
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
+.btn-rose {
+  @apply bg-rose-500 text-white;
+}
+.btn-rose:hover {
+  @apply bg-rose-700;
+}
+
+.router-link-active{
+  @apply border-blue-500;
+}
+
